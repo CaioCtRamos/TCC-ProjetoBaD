@@ -1,0 +1,15 @@
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+body{
+    background-color: rgb(10, 86, 199);
+}
+.col{
+    font-weight: bold;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
