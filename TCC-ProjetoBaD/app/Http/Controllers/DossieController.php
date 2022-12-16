@@ -32,10 +32,16 @@ class DossieController extends Controller
         return redirect('/')->with('msg','Dossie criado com sucesso.');
     }
 
-    public function show($id){
+    public function show($nome){
         
-        $dossie = Dossie::findOrFail($id);
+        $dossie = Dossie::where('nome',$nome)->firstOrFail();
 
         return view('Dossie.show', ['dossie' => $dossie]);
+    }
+
+    public function destroy($id){
+        Dossie::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg','Dossie excluido com sucesso');
     }
 }

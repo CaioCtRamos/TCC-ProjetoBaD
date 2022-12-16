@@ -56,6 +56,14 @@
                     <p>{{$dossie->lado}}</p>
                 @endforeach
             </div>
+            <div class="col">
+                BUSCA TST
+                @foreach($dossies as $dossie)
+                    <p>
+                    <a href="/dossie/{{$dossie->nome}}" class="btn btn-primary">Busca</a>
+                    </p>
+                @endforeach
+            </div>
         </div>
     </div>
     </body>

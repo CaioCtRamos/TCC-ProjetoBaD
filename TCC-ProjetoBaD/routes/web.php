@@ -19,7 +19,9 @@ Route::get('/', [DossieController::class , 'index']);
 
 Route::get('/dossie/create', [DossieController::class , 'create']);
 
-Route::get('/dossie/{id}', [DossieController::class , 'show']);
+Route::get('/dossie/{nome}', [DossieController::class , 'show']);
+
+Route::delete('/dossie/{id}', [DossieController::class , 'destroy']);
 
 Route::post('/dossie', [DossieController::class , 'store']);
 
