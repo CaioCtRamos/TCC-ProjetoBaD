@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DossieController;
 
+/* Rota Somente para visualização da Pattern */
+Route::get('/teste', [DossieController::class , 'teste']);
+
 Route::get('/', [DossieController::class , 'index']);
 
 Route::get('/dossie/create', [DossieController::class , 'create']);

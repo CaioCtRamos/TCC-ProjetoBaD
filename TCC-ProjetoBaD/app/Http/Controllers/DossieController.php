@@ -8,6 +8,10 @@ use App\Models\Dossie;
 
 class DossieController extends Controller
 {
+    public function teste(){
+        return view('pattern.mainPattern');
+    }
+
     public function index(){
 
         $dossies = Dossie::all();
