@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Localizador De Dossie</title>
+        <title>@yield('title')</title>
         
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -22,25 +22,58 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     </head>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="nav-item" href="#">
-                Corredor x
-            </a>
-            <div class="nav-item">
-                <form class="d-flex">
-                    <input type="search" class="form-control me-1" placeholder="Insira o nome do Aluno" aria-label="Search" id="NavSearch">
-                    <button class="btn btn-primary btn-sm" type="submit">Pesquisar</button>
-                </form>
-            </div>
-
-            <a class="nav-item" href="#">
-                <i class="bi bi-person-circle"></i>
-                Usuário
-            </a>
-        </div>
-    </nav>
-    <div class="footer"></div>
     <body>
+        <!-- Nav Bar-->
+        <nav class="navbar bg-body-tertiary expand-lg">
+            <div class="container-fluid">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar Aluno" aria-label="Search" id="nav-input">
+                <button class="btn btn-sm" type="submit" id="btn-nav">Buscar</button>
+              </form>
+              <div class="nav-item">
+                <a href="" class="btn btn-sm" id="nav-link"><i class="bi bi-plus-circle"></i> Criar Turma</a>
+                <a href="" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="nav-link"><i class="bi bi-person-circle"></i> Usuário</a>
+                <ul class="dropdown-menu " data-popper-placement="bottom-end" aria-labelledby="nav-link" id="nav-dropdown">
+                    <li>
+                        <a href="" class="dropdown-item">Conta</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a href="" class="dropdown-item">Sair</a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+        <!-- Barra Lateral -->
+        <div class="container-flex">
+            <div class="row">
+                <div class="d-flex flex-column flex-shrink-0 p-3 col-6" id="sideBar">
+                    <h1 id="lateralTitle">Cursos<i class="bi bi-arrow-down"></i></h1>
+                    <hr class="divider" id="lateralDivider">
+                    <a class="btn" id="curso" href="#">Desenvolvimento De Sistema</a>
+                    <a class="btn" id="curso" href="#">Automação Industrial</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                    <a class="btn" id="curso" href="#">Place Holder</a>
+                </div>
+                <div class="d-flex col-9" id="dynamicContent">
+                    <div class="container">
+                        placeholder
+                    </div>
+                </div>
+            </div>
+        </div>
+        @yield('content')
     </body>
 </html>
