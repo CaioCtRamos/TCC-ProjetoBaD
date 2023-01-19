@@ -9,7 +9,7 @@ use App\Models\Dossie;
 class DossieController extends Controller
 {
     public function teste(){
-        return view('pattern.mainPattern');
+        return view('Dossie.create');
     }
 
     public function index(){

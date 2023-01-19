@@ -49,8 +49,8 @@
         </nav>
         <!-- Barra Lateral -->
         <div class="container-flex">
-            <div class="row">
-                <div class="d-flex flex-column flex-shrink-0 p-3 col-6" id="sideBar">
+            <div class="row" id="patternRow">
+                <div class="d-flex flex-column flex-shrink-0 p-3" id="sideBar">
                     <h1 id="lateralTitle">Cursos<i class="bi bi-arrow-down"></i></h1>
                     <hr class="divider" id="lateralDivider">
                     <a class="btn" id="curso" href="#">Desenvolvimento De Sistema</a>
@@ -59,21 +59,11 @@
                     <a class="btn" id="curso" href="#">Place Holder</a>
                     <a class="btn" id="curso" href="#">Place Holder</a>
                     <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
-                    <a class="btn" id="curso" href="#">Place Holder</a>
                 </div>
-                <div class="d-flex col-9" id="dynamicContent">
-                    <div class="container">
-                        placeholder
-                    </div>
+                <div class="col" id="dynamicCol">
+                    @yield('content')
                 </div>
             </div>
         </div>
-        @yield('content')
     </body>
 </html>
