@@ -21,8 +21,11 @@
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
+        <script src="/js/scripts.js"></script>
+
     </head>
     <body>
+
         <!-- Nav Bar-->
         <nav class="navbar bg-body-tertiary expand-lg">
             <div class="container-fluid">
@@ -31,7 +34,7 @@
                 <button class="btn btn-sm" type="submit" id="btn-nav">Buscar</button>
               </form>
               <div class="nav-item">
-                <a href="" class="btn btn-sm" id="nav-link"><i class="bi bi-plus-circle"></i> Criar Turma</a>
+                <a href="/criar/turma" class="btn btn-sm" id="nav-link"><i class="bi bi-plus-circle"></i> Criar Turma</a>
                 <a href="" class="btn btn-sm dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true" id="nav-link"><i class="bi bi-person-circle"></i> Usuário</a>
                 <ul class="dropdown-menu " data-popper-placement="bottom-end" aria-labelledby="nav-link" id="nav-dropdown">
                     <li>

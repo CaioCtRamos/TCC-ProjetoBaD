@@ -12,6 +12,10 @@ class DossieController extends Controller
         return view('Dossie.create');
     }
 
+    public function classCreate(){
+        return view('/turma/create');
+    }
+
     public function index(){
 
         $dossies = Dossie::all();

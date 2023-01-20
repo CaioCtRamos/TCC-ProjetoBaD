@@ -3,6 +3,9 @@
     scroll-behavior: smooth;
     font-family: 'Open Sans';
 }
+form{
+    display:contents;
+}
 
 /* Definição da cor de fundo e altura do Body */
 body,html{
@@ -171,4 +174,11 @@ body,html{
 #formBtnPosition{
     align-content: center;
     justify-content: flex-end;
+}
+
+/* Pagina de Criação de turma/curso */
+
+#classTitle{
+    color: #F7f7f7;
+
 }

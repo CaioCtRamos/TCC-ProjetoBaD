@@ -29,6 +29,8 @@ Route::delete('/dossie/{id}', [DossieController::class , 'destroy']);
 
 Route::post('/dossie', [DossieController::class , 'store']);
 
+Route::get('/criar/turma', [DossieController::class , 'classCreate']);
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
