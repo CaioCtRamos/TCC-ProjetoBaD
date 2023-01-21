@@ -9,7 +9,7 @@ use App\Models\Dossie;
 class DossieController extends Controller
 {
     public function teste(){
-        return view('Dossie.create');
+        return view('authentication.login');
     }
 
     public function classCreate(){

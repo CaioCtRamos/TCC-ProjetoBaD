@@ -44,7 +44,7 @@
                         <hr class="dropdown-divider">
                     </li>
                     <li>
-                        <a href="" class="dropdown-item">Sair</a>
+                        <a href="/logout" class="dropdown-item">Sair</a>
                     </li>
                 </ul>
               </div>

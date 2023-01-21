@@ -15,30 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\DossieController;
+use App\Http\Controllers\UserController;
 
-/* Rota Somente para visualização da Pattern */
-Route::get('/teste', [DossieController::class , 'teste']);
+/* Autenticação de usuario */
+Route::get('/',[UserController::class, 'login']);
 
-Route::get('/', [DossieController::class , 'index']);
+Route::post('/authenticate', [UserController::class, 'authenticate']);
 
-Route::get('/dossie/create', [DossieController::class , 'create']);
+Route::get('/logout',[UserController::class,'logout']);
 
-Route::get('/dossie/{nome}', [DossieController::class , 'show']);
+Route::get('/turma',[UserController::class,'index']);
 
-Route::delete('/dossie/{id}', [DossieController::class , 'destroy']);
+Route::get('/cadastro',[UserController::class,'createUser']);
 
-Route::post('/dossie', [DossieController::class , 'store']);
-
-Route::get('/criar/turma', [DossieController::class , 'classCreate']);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+Route::post('/user/store',[UserController::class,'store']);
 
 require __DIR__.'/auth.php';

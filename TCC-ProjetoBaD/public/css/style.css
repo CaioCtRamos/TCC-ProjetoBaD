@@ -180,5 +180,48 @@ body,html{
 
 #classTitle{
     color: #F7f7f7;
+}
 
+/* Paginas de Login; Criação de Usuario; Recuperação de senha */
+
+
+.form-group{
+    display: contents;
+}
+
+#loginPageBackground{
+    background-image: linear-gradient(to bottom, #404258, #474E68, #50577A, #6B728E);
+}
+main{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 90px;
+    border-radius: 25px;
+    color: white;
+}
+#box-email, #box-senha{
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    width: 100%;
+    
+}
+#button-enviar{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #6B728E;
+    width: 100%;
+    color: white;
+}
+#title{
+    width: 100%;
+}
+#loginAnchor{
+    color: white;
+    text-decoration: none;
 }
