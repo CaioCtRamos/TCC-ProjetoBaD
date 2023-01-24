@@ -42,16 +42,17 @@ class UserController extends Controller
     }
 
     public function store(Request $request){
-        $user = new User;
-        $password = bcrypt($request->password);
-
-
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $password;
-
-        $user->save();
-
-        return redirect('/')->with('msg','Usuario Criado com Sucesso!');
+        
+        if($request->password == $request->passconfirmation){
+            $user = new User;
+            $password = bcrypt($request->password);
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = $password;
+            $user->save();
+    
+            return redirect('/')->with('msg','Usuario Criado com Sucesso!');
+        }
+        return back()->with('msg','As senhas não coincidem')->withInput();
     }
 }

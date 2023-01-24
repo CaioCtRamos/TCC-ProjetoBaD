@@ -14,6 +14,9 @@
         @csrf
         <div class="form-group">
             <h1 class="text-center" id="title">Cadastro</h1>
+            @if(session('msg'))
+                <div class="alert alert-danger">{{session('msg')}}</div>
+            @endif
             <input id="box-email" type="text" placeholder="Usuário" class="form-control" name="name"><br>
         </div>
 
@@ -25,7 +28,9 @@
             <input id="box-senha" type="password" placeholder="Senha" class="form-control" name="password"><br>
         </div>
 
-        <input id="box-senha" type="password" placeholder="Confirmar senha"><br><br>
+        <div class="form-group">
+            <input id="box-senha" type="password" class="form-control" name="passconfirmation" placeholder="Confirmar senha"><br><br>
+        </div>
 
         <div class="form-group">
             <button id="button-enviar" type="submit" name="submit" value="create">Enviar</button>
